@@ -70,7 +70,6 @@ public class ClimbProvider : MonoBehaviour
     private void Climb()
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
-        Debug.Log("climb");
         characterController.Move(characterController.transform.rotation * -velocity * Time.fixedDeltaTime);
     }
 }
