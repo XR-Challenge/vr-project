@@ -1,3 +1,6 @@
+#Exclude everything
 *
 */
 !.gitignore
+#except this file
+!somefolder/.gitkeep 
