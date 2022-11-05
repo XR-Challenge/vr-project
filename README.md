@@ -1,4 +1,4 @@
-# xr-game
+# VR Project
 Repository for XR Challenge game
 
 Kinda empty for now 
