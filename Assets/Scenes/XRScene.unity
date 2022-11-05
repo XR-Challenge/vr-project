@@ -677,16 +677,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
-    - target: {fileID: 4043571155703093447, guid: e5585d194500f4d47b80f01a215844bc,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
-      objectReference: {fileID: 148836302397513041, guid: 957224f55fecb4e4c87bd2a2171b79d6,
-        type: 3}
-    - target: {fileID: 5342636026734440877, guid: e5585d194500f4d47b80f01a215844bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5585d194500f4d47b80f01a215844bc, type: 3}
