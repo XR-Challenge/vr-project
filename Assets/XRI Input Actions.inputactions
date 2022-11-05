@@ -1,5 +1,5 @@
 {
-    "name": "XRI Default Input Actions",
+    "name": "XRI Input Actions",
     "maps": [
         {
             "name": "XRI Head",
@@ -85,6 +85,15 @@
                     "type": "PassThrough",
                     "id": "664a62b0-e178-421d-b3f8-014eec01591d",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "36123792-3645-416a-8043-4ef3bf9b2f07",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -200,6 +209,17 @@
                     "action": "Tracking State",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bde07730-56b5-4707-807f-6e8a4b458439",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -275,6 +295,15 @@
                     "type": "Value",
                     "id": "bfa204c7-3c92-4193-bad1-39eb71920042",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Velocity",
+                    "type": "Value",
+                    "id": "302884a0-efde-4a2a-a62e-0488a9f446ad",
+                    "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -456,6 +485,17 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3f1b2511-a35e-4218-b675-39e666b25d5d",
+                    "path": "<HPMixedRealityController>{LeftHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -796,6 +836,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Velocity",
+                    "type": "Value",
+                    "id": "78750be3-0f75-4997-bbbd-0050c1df57b6",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -974,6 +1023,17 @@
                     "action": "Translate Anchor",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "0388cfed-9f5e-4cf0-b0bd-317976ded4c3",
+                    "path": "<HPMixedRealityController>{RightHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

@@ -818,7 +818,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "velocity",
+                    "name": "Velocity",
                     "type": "Value",
                     "id": "bca1c253-b220-4080-8089-c49b7086da54",
                     "expectedControlType": "Vector3",
@@ -1011,7 +1011,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "velocity",
+                    "action": "Velocity",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
