@@ -7,10 +7,16 @@ public class GetDistanceFrom : MonoBehaviour
     /*  This script gets the distance between two 
      *  objects using the cartesian distance formula
      *  
-     *  Public methods:
+     *  to -> current object this script is applied to
+     *  from -> serializedField GameObject
+     *  
+     *  Methods:
      *  - void calDist() : calculates and updates distance between objects
      *  - void updateVectors() : updates teh current position of the vectors
      *  - float getDistance() : accessor for distance between two objects
+     *  ~ use these two methods to save on runtime if you know an object is static
+     *  - updateToVector() : updates to vector only
+     *  - updateFromVector() : updates from vector only
      */
     [SerializeField] public GameObject ObjectDistanceTo;//object to get distance from current object to
     private Vector3 to;
@@ -19,7 +25,6 @@ public class GetDistanceFrom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -28,16 +33,34 @@ public class GetDistanceFrom : MonoBehaviour
 
     }
 
-     public void calcDist()
-    {
-        distance = Mathf.Sqrt(Mathf.Pow(2, (to.x - from.x)) + Mathf.Pow(2, (to.y - from.y)) + Mathf.Pow(2, to.z - from.z));
-    }
+    /*** Update Vectors ***/
 
     public void updateVectors()
     {
-        to = gameObject.transform.position;
-        from = ObjectDistanceTo.transform.position;
+        to = ObjectDistanceTo.transform.position;
+        from =  gameObject.transform.position;
+    }
+
+    public void updateToVector()
+    {
+        to = ObjectDistanceTo.transform.position;
+    }
+
+    public void updateFromVector() {
+        from = gameObject.transform.position;
+    }
+
+    /*** data access/calculations ***/
+    public void calcDist()
+    {
+        distance = Vector3.Distance(to, from);
     }
 
     public float getDistance() { return distance; }
+
+    /*** Tests/debug ***/
+
+    public void debugDist() {
+        Debug.Log(getDistance());
+    }
 }
