@@ -31,7 +31,6 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandActivated(string _controllerName)
     {
-        Debug.Log("Activated '" + _controllerName + "'");
         if(_controllerName == "LeftHand Controller")
         {
             _leftActive = true;
