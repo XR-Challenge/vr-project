@@ -20,7 +20,6 @@ public class XRDirectClimb : XRDirectInteractor
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        Debug.Log("Climb selectEntered");
         if(args.interactableObject.transform.gameObject.tag == "Climbable")
         {
             ClimbHandActivated?.Invoke(_controllerName);
@@ -31,8 +30,6 @@ public class XRDirectClimb : XRDirectInteractor
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
-        Debug.Log("Climb selectExited");
-
         ClimbHandDeactivated?.Invoke(_controllerName);
     }
 }
