@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0672: Member overrides obsolete member
+dotnet_diagnostic.CS0672.severity = none
