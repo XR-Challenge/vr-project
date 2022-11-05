@@ -47,7 +47,6 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandDeactivated(string _controllerName)
     {
-
         if(_rightActive && _controllerName == "RightHand Controller")
         {
             _rightActive = false;
