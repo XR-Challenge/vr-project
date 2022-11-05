@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class ClimbInteractable : MonoBehaviour
+public class ClimbInteractable : XRBaseInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Obsolete]
+    protected override void OnSelectEntering(XRBaseInteractor interactor)
     {
-        
+        base.OnSelectEntering(interactor);
+
+        if(interactor is XRDirectInteractor)
+        Climber.climbingHand = interactor.GetComponent<XRController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    [System.Obsolete]
+    protected override void OnSelectExiting(XRBaseInteractor interactor)
     {
-        
+        base.OnSelectExiting(interactor);
+
+        if (interactor is XRDirectInteractor)
+        {
+            if(Climber.climbingHand && Climber.climbingHand.name == interactor.name)
+            {
+                Climber.climbingHand = null;
+            }
+        }
     }
 }
