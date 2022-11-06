@@ -31,8 +31,7 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandActivated(string _controllerName)
     {
-        Debug.Log("Activated '" + _controllerName + "'");
-        if(_controllerName == "LeftHand Controller")
+        if (_controllerName == "LeftHand Controller")
         {
             _leftActive = true;
             _rightActive = false;
@@ -48,13 +47,12 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandDeactivated(string _controllerName)
     {
-
-        if(_rightActive && _controllerName == "RightHand Controller")
+        if (_rightActive && _controllerName == "RightHand Controller")
         {
             _rightActive = false;
             ClimbInactive?.Invoke();
         }
-        else if(_leftActive && _controllerName == "LeftHand Controller")
+        else if (_leftActive && _controllerName == "LeftHand Controller")
         {
             _leftActive = false;
             ClimbInactive?.Invoke();
@@ -63,7 +61,7 @@ public class ClimbProvider : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_rightActive || _leftActive)
+        if (_rightActive || _leftActive)
         {
             Climb();
         }
@@ -72,7 +70,12 @@ public class ClimbProvider : MonoBehaviour
     private void Climb()
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
-        Debug.Log("climb");
         characterController.Move(characterController.transform.rotation * -velocity * Time.fixedDeltaTime);
+        //This was example code on applying drag to a player when they are climbing. How to implement it is currently unknown.
+        //Vector3 handVel = (handTarget.localPosition - prevPosition) / Time.fixedDeltaTime;
+        //float drag = 1 / handVel.magnitude + 0.01f;
+        //drag = drag >= 1 ? 1 : drag;
+        //drag = drag <= 0.3f ? 0.3f : drag;
+        //characterController.AddForce(-characterController.velocity * clamberDrag * drag);
     }
 }
