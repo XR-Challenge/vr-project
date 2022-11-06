@@ -109,6 +109,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e14fa6a5edb10e409ca8c6b7584565b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Climbable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e14fa6a5edb10e409ca8c6b7584565b, type: 3}
 --- !u!4 &7398376886675611980 stripped
