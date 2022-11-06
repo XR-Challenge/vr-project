@@ -28,7 +28,7 @@ public class TreeGenerator : MonoBehaviour
             float xAngle = startXAngle * (1f - alpha) + endXAngle * alpha;
             for (int j = 0; j < branchesPerLayer; j++) {
                 float angleOffset = j * 360f / branchesPerLayer;
-                GameObject l = Instantiate(leaf, new Vector3(0, y, 0f), Quaternion.Euler(xAngle, angle + angleOffset, 0f));
+                GameObject l = Instantiate(leaf, new Vector3(0, y, 0f) + transform.position, Quaternion.Euler(xAngle, angle + angleOffset, 0f));
                 l.GetComponent<XRGrabInteractable>().interactionManager = interactionManager;
                 l.transform.localScale = new Vector3(scale, scale, scale);
             }
