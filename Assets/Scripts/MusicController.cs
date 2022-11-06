@@ -9,6 +9,7 @@ public class MusicController : MonoBehaviour
     public AudioClip fanfare;
     public float volume = 0.5f;
     private bool kiteCollected = false;
+    private bool buildupPlayed = false;
     private bool fanfarePlayed = true;
     private bool inZone = false;
     private AudioSource src;
@@ -27,7 +28,11 @@ public class MusicController : MonoBehaviour
                 src.PlayOneShot(fanfare, volume);
                 fanfarePlayed = true;
             } else if (inZone && !kiteCollected) {
-                src.PlayOneShot(buildup, volume);
+                if (!buildupPlayed)
+                {
+                    buildupPlayed = true;
+                    src.PlayOneShot(buildup, volume);
+                }
             } else {
                 src.PlayOneShot(main, volume);
             }
@@ -38,10 +43,12 @@ public class MusicController : MonoBehaviour
     {
         if (state && !inZone) {
             inZone = true;
-            src.Stop();
+            if (!buildupPlayed)
+            {
+                src.Stop();
+            }
         } else if (!state && inZone) {
             inZone = false;
-            src.Stop();
         }
     }
 
