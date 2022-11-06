@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5526350487280401209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4187502167668825059}
@@ -48,8 +48,6 @@ MonoBehaviour:
   leaf: {fileID: 1249085500841997476, guid: d9f90229631cb884c9de79a8d7374354, type: 3}
   branchesPerLayer: 5
   layers: 18
-  width: 1
-  height: 10
   startHeight: 2
   angleIncrement: 30
   startScale: 0.5
