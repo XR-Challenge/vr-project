@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class ClimbProvider : MonoBehaviour
 {
@@ -64,7 +63,6 @@ public class ClimbProvider : MonoBehaviour
     {
         if(_rightActive || _leftActive)
         {
-            Vector3 prevPosition = 
             Climb();
         }
     }
@@ -73,11 +71,5 @@ public class ClimbProvider : MonoBehaviour
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
         characterController.Move(characterController.transform.rotation * -velocity * Time.fixedDeltaTime);
-        //This was example code on applying drag to a player when they are climbing. How to implement it is currently unknown.
-        //Vector3 handVel = (handTarget.localPosition - prevPosition) / Time.fixedDeltaTime;
-        //float drag = 1 / handVel.magnitude + 0.01f;
-        //drag = drag >= 1 ? 1 : drag;
-        //drag = drag <= 0.3f ? 0.3f : drag;
-        //characterController.AddForce(-characterController.velocity * clamberDrag * drag);
     }
 }
