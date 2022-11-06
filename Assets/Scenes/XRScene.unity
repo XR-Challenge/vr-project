@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
@@ -298,6 +298,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7421033346236238759, guid: a395c86c3162905429faefc5a6a4fe90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: a395c86c3162905429faefc5a6a4fe90,
         type: 3}
       propertyPath: m_IsActive
@@ -317,6 +322,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Large Tree Climbable_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457708582454128763, guid: a395c86c3162905429faefc5a6a4fe90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117776171515059344, guid: a395c86c3162905429faefc5a6a4fe90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8117776171515059344, guid: a395c86c3162905429faefc5a6a4fe90,
         type: 3}
@@ -787,7 +802,7 @@ PrefabInstance:
     - target: {fileID: 4043571155620333880, guid: e5585d194500f4d47b80f01a215844bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4043571155620333880, guid: e5585d194500f4d47b80f01a215844bc,
         type: 3}
