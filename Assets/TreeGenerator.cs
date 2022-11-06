@@ -5,7 +5,6 @@ using UnityEngine;
 public class TreeGenerator : MonoBehaviour
 {
     public GameObject leaf;
-    public GameObject trunk;
     public int branchesPerLayer = 3;
     public int layers = 25;
     public float width = 1f;
@@ -19,7 +18,6 @@ public class TreeGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        trunk.transform.localScale = new Vector3(width, height/25f, width);
         for (int i = 0; i < layers; i++)
         {
             float y = startHeight + i * (height - startHeight) / layers;
@@ -33,6 +31,7 @@ public class TreeGenerator : MonoBehaviour
                 l.transform.localScale = new Vector3(scale, scale, scale);
             }
         }
+        transform.localScale = new Vector3(width, height / 25f, width);
     }
 
     // Update is called once per frame
