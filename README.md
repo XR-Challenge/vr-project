@@ -1,11 +1,7 @@
 # VR Project
-Repository for XR Challenge game
+“Risky play” is a concept in which we must formulate a scenario that rewards an individual for taking risk, while also actively reminding them that there is immediate danger or some form of undesirable outcome. 
 
-Kinda empty for now 
-No hablo C++
-Hi
-;)
+
+Hi ;)
+
 Ahoy matey!
-
-Testing VR-Project Repository
-my thing again
