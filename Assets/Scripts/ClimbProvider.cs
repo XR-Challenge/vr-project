@@ -31,7 +31,7 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandActivated(string _controllerName)
     {
-        if(_controllerName == "LeftHand Controller")
+        if (_controllerName == "LeftHand Controller")
         {
             _leftActive = true;
             _rightActive = false;
@@ -47,12 +47,12 @@ public class ClimbProvider : MonoBehaviour
 
     private void HandDeactivated(string _controllerName)
     {
-        if(_rightActive && _controllerName == "RightHand Controller")
+        if (_rightActive && _controllerName == "RightHand Controller")
         {
             _rightActive = false;
             ClimbInactive?.Invoke();
         }
-        else if(_leftActive && _controllerName == "LeftHand Controller")
+        else if (_leftActive && _controllerName == "LeftHand Controller")
         {
             _leftActive = false;
             ClimbInactive?.Invoke();
@@ -61,7 +61,7 @@ public class ClimbProvider : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_rightActive || _leftActive)
+        if (_rightActive || _leftActive)
         {
             Climb();
         }
