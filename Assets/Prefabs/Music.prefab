@@ -144,3 +144,4 @@ MonoBehaviour:
   main: {fileID: 8300000, guid: 1df2add54697b497c8117329ebb78a26, type: 3}
   buildup: {fileID: 8300000, guid: a7a0d9fa9a639c444ad299eae07dbf43, type: 3}
   fanfare: {fileID: 8300000, guid: 101f7b23e77f27346ae1dbad36b43347, type: 3}
+  volume: 0.25
